@@ -55,7 +55,146 @@ video {
   font-size: 40px;
   text-align: center;
 }
+//----------------------------------
+// 01 hover
+.wrapper-hover .item:hover {
+  background: #f42684;
+}
 
-// ---------------------------------------------
-// Votre code ici :
-// ---------------------------------------------
+// 02 transition
+.wrapper-transition .item {
+  transition: background 0.5s;
+}
+
+.wrapper-transition .item:hover {
+  background: #f42684;
+}
+
+// 03 delay
+.wrapper-delay .item {
+  transition: background 0.5s 0.5s;
+}
+
+.wrapper-delay .item:hover {
+  background: #f42684;
+}
+
+// 04 deux propriétés
+.wrapper-two-properties .item {
+  transition: background 0.5s;
+}
+
+.wrapper-two-properties .item:hover {
+  background: #f42684;
+  color: #000;
+}
+
+// 05 delay sur une propriété
+.wrapper-delay-one-property .item {
+  transition: background 0.5s 0.5s;
+  transition: color 0.5s 0.5s;
+}
+
+.wrapper-delay-one-property .item:hover {
+  background: #f42684;
+  color: #000;
+}
+
+// 06 sélecteur parent
+.wrapper-parent .item {
+  transition: background 0.5s;
+}
+
+.wrapper-parent:hover .item {
+  background: #f42684;
+}
+
+//07 :nth-child()
+.wrapper-parent-delay .item {
+  transition: background 0.5s;
+}
+
+.wrapper-parent-delay:hover .item {
+  background: #f42684;
+}
+
+.wrapper-parent-delay .item:nth-child(2) {
+  transition-delay: 1s;
+}
+
+.wrapper-parent-delay .item:nth-child(3) {
+  transition-delay: 1.5s;
+}
+
+.wrapper-parent-delay .wrapper-parent-delay:hover .item:nth-child(1) {
+  background: #f42684;
+  transition-delay: 0.5s;
+}
+
+.wrapper-parent-delay .wrapper-parent-delay:hover .item:nth-child(2) {
+  background: #f42684;
+  transition-delay: 1s;
+}
+
+.wrapper-parent-delay .wrapper-parent-delay:hover .item:nth-child(3) {
+  background: #f42684;
+  transition-delay: 1.5s;
+}
+
+// 08 effet parent et enfants
+.wrapper-parent-children .item {
+  transition: background 0.5s;
+}
+
+.wrapper-parent-children:hover .item {
+  background: #f42684;
+}
+
+.wrapper-parent-children:hover {
+  background: #4361ee;
+}
+
+//09 effet parent et enfant, delay
+.wrapper-parent-children-delay .item {
+  transition: background 0.5s 0.5s;
+}
+
+.wrapper-parent-children-delay {
+  transition-delay: background 0.5s;
+}
+
+.wrapper-parent-children-delay:hover {
+  background: #4361ee;
+}
+
+.wrapper-parent-children-delay:hover .item {
+  background: #f42684;
+}
+
+//10 translate
+.wrapper-translate .item:hover {
+  transform: translateY(20%);
+}
+
+.wrapper-translate .item {
+  transition: transform 0.5s;
+}
+
+//11 rotate
+.wrapper-rotate .item:hover {
+  transform: rotate(90deg);
+}
+
+.wrapper-rotate .item {
+  transition: transform 0.5s;
+}
+
+//12 scale
+.wrapper-scale .item:hover {
+  transform: scale(1.2);
+}
+
+.wrapper-scale .item {
+  transition: transform 0.5s;
+}
+//----------------------------------
